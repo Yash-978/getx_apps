@@ -19,7 +19,11 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: '/',
           page: () => const CounterApp(),
-        )
+        ),
+        GetPage(
+          name: '/',
+          page: () => const CounterApp(),
+        ),
       ],
     );
   }
