@@ -17,9 +17,6 @@ class UserdataPage extends StatelessWidget {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          txtId.clear();
-          txtDesignation.clear();
-          txtName.clear();
           Get.dialog(AlertDialog(
             title: Text('Add Employee Data'),
             content: Column(

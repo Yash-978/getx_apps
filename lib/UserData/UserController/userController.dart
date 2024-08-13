@@ -8,18 +8,23 @@ class EmployController extends GetxController {
   RxList<EmployeeDataModel> employDataList = <EmployeeDataModel>[].obs;
 
   void addEmployData(Map employee) {
-    EmployeeDataModel employeeDataModel = EmployeeDataModel.fromMap(employee);
-    employDataList.add(employeeDataModel);
+    // EmployeeDataModel employeeDataModel = EmployeeDataModel.fromMap(employee);
+    // employDataList.add(employeeDataModel);
+    employDataList.add(EmployeeDataModel.fromMap(employee));
   }
 
   void removeEmployee(int index) {
     employDataList.removeAt(index);
   }
 
-  void updateEmployee(int index, Map updatedEmployee) {
-    EmployeeDataModel updatedEmployeeModal =
-        EmployeeDataModel.fromMap(updatedEmployee);
-    employDataList[index] = updatedEmployeeModal;
+  // void updateEmployee(int index, Map updatedEmployee) {
+  //   EmployeeDataModel updatedEmployeeModal =
+  //       EmployeeDataModel.fromMap(updatedEmployee);
+  //   employDataList[index] = updatedEmployeeModal;
+  // }
+  void updateEmployeeData(int index, Map employee) {
+    employDataList.removeAt(index);
+    employDataList.insert(index, EmployeeDataModel.fromMap(employee));
   }
 }
 // class EmployController extends GetxController {
