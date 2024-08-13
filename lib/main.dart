@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'CounterApp/CounterVIew/counterView.dart';
+import 'UserData/UserView/Screens/UserDataView.dart';
 
 // import '';
 void main() {
@@ -15,14 +16,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
+      initialRoute: '/user',
       getPages: [
         GetPage(
           name: '/',
           page: () => const CounterApp(),
         ),
         GetPage(
-          name: '/',
-          page: () => const CounterApp(),
+          name: '/user',
+          page: () => const UserdataPage(),
         ),
       ],
     );
